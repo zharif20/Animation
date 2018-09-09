@@ -12,6 +12,8 @@
 		7250B96421450BC3009E5D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7250B96221450BC3009E5D17 /* Main.storyboard */; };
 		7250B96621450BC8009E5D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7250B96521450BC8009E5D17 /* Assets.xcassets */; };
 		7250B96921450BC8009E5D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7250B96721450BC8009E5D17 /* LaunchScreen.storyboard */; };
+		7250B971214514BE009E5D17 /* TextFieldAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250B970214514BE009E5D17 /* TextFieldAnimation.swift */; };
+		7250B976214531EC009E5D17 /* PulsingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250B975214531EC009E5D17 /* PulsingAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7250B96521450BC8009E5D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7250B96821450BC8009E5D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7250B96A21450BC8009E5D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7250B970214514BE009E5D17 /* TextFieldAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAnimation.swift; sourceTree = "<group>"; };
+		7250B975214531EC009E5D17 /* PulsingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,30 @@
 			children = (
 				7250B95E21450BC3009E5D17 /* AppDelegate.swift */,
 				7250B96021450BC3009E5D17 /* ViewController.swift */,
+				7250B974214531C0009E5D17 /* CALayer */,
+				7250B972214531A9009E5D17 /* UITextField */,
 				7250B96221450BC3009E5D17 /* Main.storyboard */,
 				7250B96521450BC8009E5D17 /* Assets.xcassets */,
 				7250B96721450BC8009E5D17 /* LaunchScreen.storyboard */,
 				7250B96A21450BC8009E5D17 /* Info.plist */,
 			);
 			path = LoginAnimation;
+			sourceTree = "<group>";
+		};
+		7250B972214531A9009E5D17 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				7250B970214514BE009E5D17 /* TextFieldAnimation.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		7250B974214531C0009E5D17 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				7250B975214531EC009E5D17 /* PulsingAnimation.swift */,
+			);
+			path = CALayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +159,8 @@
 			files = (
 				7250B96121450BC3009E5D17 /* ViewController.swift in Sources */,
 				7250B95F21450BC3009E5D17 /* AppDelegate.swift in Sources */,
+				7250B971214514BE009E5D17 /* TextFieldAnimation.swift in Sources */,
+				7250B976214531EC009E5D17 /* PulsingAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var texfieldShake: TextFieldAnimation!
+    @IBOutlet weak var pressImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.texfieldShake.delegate = self
+        
+        self.pressImage.layer.cornerRadius = self.pressImage.frame.size.width/2
+        self.pressImage.clipsToBounds = true
+        self.pressImage.isUserInteractionEnabled = true
+        
+        let userTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap))
+        userTap.numberOfTapsRequired = 1
+        self.pressImage.addGestureRecognizer(userTap)
+        
+        view.backgroundColor = .lightGray
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func handleTap() {
+        let pulseAnimate = PulsingAnimation.init(numberOfPulses: 1, radius: 110, position: self.pressImage.center)
+        pulseAnimate.animationDuration = 0.8
+        pulseAnimate.backgroundColor = UIColor.black.cgColor
+        self.view.layer.insertSublayer(pulseAnimate, below: self.pressImage.layer)
     }
-
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.texfieldShake.shakeTextField()
+    }
 
 }
 

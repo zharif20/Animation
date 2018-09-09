@@ -1,21 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wqp-Yg-U2O"/>
+                        <viewControllerLayoutGuide type="bottom" id="oq6-0I-A7D"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-Yf-stH" customClass="TextFieldAnimation" customModule="LoginAnimation" customModuleProvider="target">
+                                <rect key="frame" x="87" y="318" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vAi-2g-Cua"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w4M-3q-DjK">
+                                <rect key="frame" x="137" y="430" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.2292856872" green="0.35111221669999998" blue="0.59596258400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Qfn-mQ-2XD"/>
+                                    <constraint firstAttribute="height" constant="100" id="fJI-IR-6tO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="w4M-3q-DjK" firstAttribute="top" secondItem="3hT-Yf-stH" secondAttribute="bottom" constant="82" id="643-MI-wCU"/>
+                            <constraint firstItem="w4M-3q-DjK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZc-hh-gt5"/>
+                            <constraint firstItem="3hT-Yf-stH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGc-A8-JvA"/>
+                            <constraint firstItem="3hT-Yf-stH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xtr-5Y-RRF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pressImage" destination="w4M-3q-DjK" id="7zL-FU-HRW"/>
+                        <outlet property="texfieldShake" destination="3hT-Yf-stH" id="K38-6n-agJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
